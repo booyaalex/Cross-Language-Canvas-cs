@@ -45,7 +45,6 @@
             this.btn_Select_Yellow = new System.Windows.Forms.Button();
             this.btn_Select_Orange = new System.Windows.Forms.Button();
             this.btn_Select_Red = new System.Windows.Forms.Button();
-            this.pnl_Room_Screen = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Canvas)).BeginInit();
             this.pnl_Tool_Selection.SuspendLayout();
             this.pnl_Color_Options.SuspendLayout();
@@ -53,6 +52,9 @@
             // 
             // pic_Canvas
             // 
+            this.pic_Canvas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Canvas.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pic_Canvas.Location = new System.Drawing.Point(12, 12);
             this.pic_Canvas.Name = "pic_Canvas";
@@ -63,6 +65,8 @@
             // 
             // pnl_Tool_Selection
             // 
+            this.pnl_Tool_Selection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_Tool_Selection.Controls.Add(this.lbl_Color_Display);
             this.pnl_Tool_Selection.Controls.Add(this.btn_Select_Trigon);
             this.pnl_Tool_Selection.Controls.Add(this.btn_Select_Circ);
@@ -248,21 +252,12 @@
             this.btn_Select_Red.UseVisualStyleBackColor = false;
             this.btn_Select_Red.Click += new System.EventHandler(this.btn_Select_Red_Click);
             // 
-            // pnl_Room_Screen
-            // 
-            this.pnl_Room_Screen.Location = new System.Drawing.Point(12, 444);
-            this.pnl_Room_Screen.Name = "pnl_Room_Screen";
-            this.pnl_Room_Screen.Size = new System.Drawing.Size(776, 423);
-            this.pnl_Room_Screen.TabIndex = 2;
-            this.pnl_Room_Screen.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnl_Room_Screen);
+            this.ClientSize = new System.Drawing.Size(801, 452);
             this.Controls.Add(this.pnl_Tool_Selection);
             this.Controls.Add(this.pic_Canvas);
             this.Name = "Form1";
@@ -280,7 +275,6 @@
 
         private System.Windows.Forms.PictureBox pic_Canvas;
         private System.Windows.Forms.Panel pnl_Tool_Selection;
-        private System.Windows.Forms.Panel pnl_Room_Screen;
         private System.Windows.Forms.Panel pnl_Color_Options;
         private System.Windows.Forms.Button btn_Select_Red;
         private System.Windows.Forms.Button btn_Select_Green;
