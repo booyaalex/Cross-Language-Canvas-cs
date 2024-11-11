@@ -85,6 +85,10 @@ namespace Database_and_Drawing_Testing
                 {
                     AddTrigon(element);
                 }
+                if (element.type == "circ")
+                {
+                    AddCirc(element);
+                }
             }
         }
 
@@ -119,6 +123,16 @@ namespace Database_and_Drawing_Testing
             PointF[] trigonPoints = { point1, point2, point3 };
 
             myCanvas.FillPolygon(brush, trigonPoints, FillMode.Winding);
+        }
+        public void AddCirc(Element circ)
+        {
+            Graphics myCanvas = pic_Canvas.CreateGraphics();
+
+            SolidBrush brush = new SolidBrush(circ.color);
+
+            int width = Math.Max(circ.x1, circ.x2) - Math.Min(circ.x1, circ.x2);
+            int height = Math.Max(circ.y1, circ.y2) - Math.Min(circ.y1, circ.y2);
+            myCanvas.FillEllipse(brush, Math.Min(circ.x1, circ.x2), Math.Min(circ.y1, circ.y2), width, height);
         }
 
         //Canvas Drawing
